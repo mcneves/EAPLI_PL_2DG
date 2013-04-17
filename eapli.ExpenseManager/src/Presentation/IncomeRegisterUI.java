@@ -29,9 +29,9 @@ public class IncomeRegisterUI extends BaseUI {
 
         System.out.println("* * *  REGISTER AN INCOME  * * *\n");
         String desc = Console.readLine("Description:\n");
-        int year = Console.readInteger("Year:\n");
-        int month = Console.readInteger("Month (1-12):\n");
-        int day = Console.readInteger("Day:\n");
+//        int year = Console.readInteger("Year:\n");
+//        int month = Console.readInteger("Month (1-12):\n");
+//        int day = Console.readInteger("Day:\n");
 
         Date date = Console.readDate("Date (dd-mm-yyyy): ");
 

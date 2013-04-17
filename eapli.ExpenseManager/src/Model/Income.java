@@ -18,7 +18,7 @@ public class Income {
     
     private String description;
     private BigDecimal amount;
-    private Date dateOcurred;
+    private Date dateOccurred;
     private IncomeType type;
     
     protected Income(){
@@ -34,7 +34,7 @@ public class Income {
         }
         this.description = description;
         this.amount = amount;
-        this.dateOcurred = dateOcurred;
+        this.dateOccurred = dateOccurred;
         this.type=type;
     }
     
@@ -44,7 +44,7 @@ public class Income {
         double doubleAmount = this.amount.doubleValue();
         String s = "Description: " + this.description
                 + "\nAmount: " + n.format(doubleAmount)  
-                +"\nDate: " + dateOcurred
+                +"\nDate: " + dateOccurred
                 + "\n "+ type;
         return s;
     }

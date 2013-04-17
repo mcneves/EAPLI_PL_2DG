@@ -4,6 +4,7 @@
  */
 package Presentation;
 
+import Controllers.BaseController;
 import Controllers.ExpenseTypeRegisterController;
 import Model.ExpenseType;
 import eapli.util.Console;
@@ -13,7 +14,7 @@ import java.util.List;
  *
  * @author Ricardo Rocha
  */
-public class ExpenseTypeRegisterUI {
+public class ExpenseTypeRegisterUI extends BaseUI{
         
       private ExpenseTypeRegisterController controller = new ExpenseTypeRegisterController();
       public ExpenseTypeRegisterUI() {
@@ -33,5 +34,13 @@ public class ExpenseTypeRegisterUI {
 
             System.out.println("Expense type recorded.");
       }
+@Override
+    protected BaseController controller() {
+        return controller;
+    }
 
+    @Override
+    public void header() {
+        System.out.println("* * * EXPENSE TYPE REGISTER UI * * *");
+    }
 }

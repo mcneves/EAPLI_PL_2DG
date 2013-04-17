@@ -13,7 +13,7 @@ import java.util.List;
  *
  * @author Nuno
  */
-public class IncomeTypeRegisterController {
+public class IncomeTypeRegisterController extends BaseController{
     public IncomeTypeRegisterController(){}
     public void registerIncomeType(String description)
     {

@@ -42,9 +42,9 @@ public class ExpenseRegisterUI extends BaseUI {
 
         displayListPaymentMeans(controller.getPaymentMeans()); // Listar meios de pagamento
         int ppm = Console.readInteger("Select a payment mean:\n");
-        PaymentMean mean = controller.getPaymentMeans().get(-1);
+        PaymentMean mean = controller.getPaymentMeans().get(ppm-1);
         
-        String comment = Console.readLine("Comment\n"); //Comentário da despesa
+        //String comment = Console.readLine("Comment\n"); //Comentário da despesa
 
         displayListExpenseType(controller.getExpenseTypes()); //listar os tipos de despesa
 
