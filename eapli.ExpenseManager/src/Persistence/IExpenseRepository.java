@@ -9,10 +9,10 @@ import java.util.List;
 
 /**
  *
- * @author Outsider
+ * @author i100623
  */
 public interface IExpenseRepository {
     void saveExpense(Expense exp);
-    List<Expense> getAllExpenses();
-    Expense getLastExpense();
+    List<Expense>getAllExpenses();
+    Expense getLastExpense();  
 }

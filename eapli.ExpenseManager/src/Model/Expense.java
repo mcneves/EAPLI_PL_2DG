@@ -1,3 +1,4 @@
+
 /*
  * To change this template, choose Tools | Templates
  * and open the template in the editor.
@@ -29,7 +30,6 @@ public class Expense {
     protected Expense() {
     }
 
-
     public Expense(String description, Date dateOccurred, BigDecimal amount) {
         if (description == null || dateOccurred == null || amount == null) {
             throw new IllegalArgumentException();
@@ -40,7 +40,6 @@ public class Expense {
         }
         this.description = description;
         this.amount = amount;
-        this.dateOccurred = dateOccurred;
     }
 
 //antiga data calendar
@@ -76,6 +75,7 @@ public class Expense {
     }
     
     
+    
     public Expense(String description, Date dateOccurred, BigDecimal amount, PaymentMean paymentMean, ExpenseType type) {
         if (description == null || dateOccurred == null || amount == null) {
             throw new IllegalArgumentException();
@@ -104,11 +104,10 @@ public class Expense {
 
     }
 
-    public Date getDateOcurred() {
+    public Date getDateOcurred(){
         return dateOccurred;
     }
-
-    public BigDecimal getAmount() {
+    public BigDecimal getAmount(){
         return amount;
     }
     

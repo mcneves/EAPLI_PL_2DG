@@ -48,5 +48,5 @@ public class Income {
                 + "\n "+ type;
         return s;
     }
-    
+
 }

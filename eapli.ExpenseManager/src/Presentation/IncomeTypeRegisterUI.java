@@ -17,7 +17,8 @@ import java.util.List;
  */
 public class IncomeTypeRegisterUI extends BaseUI {
           private IncomeTypeRegisterController controller = new IncomeTypeRegisterController();
-      public IncomeTypeRegisterUI() {
+     
+          public IncomeTypeRegisterUI() {
       }
 
       @Override
@@ -35,7 +36,8 @@ public class IncomeTypeRegisterUI extends BaseUI {
 
             System.out.println("Income type recorded.");
       }
-      @Override
+
+    @Override
     protected BaseController controller() {
         return controller;
     }
