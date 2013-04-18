@@ -39,10 +39,6 @@ public class ExpenseTypeRegisterUI extends BaseUI {
         return controller;
     }
 
-    @Override
-    protected BaseController controller() {
-        return controller;
-    }
 
     @Override
     public void header() {
