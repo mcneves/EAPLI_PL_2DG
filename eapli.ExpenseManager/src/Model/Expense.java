@@ -40,6 +40,7 @@ public class Expense {
         }
         this.description = description;
         this.amount = amount;
+        this.dateOccurred=dateOccurred;
     }
 
 //antiga data calendar
