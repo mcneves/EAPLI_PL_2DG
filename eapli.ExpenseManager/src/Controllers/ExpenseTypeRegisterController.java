@@ -12,7 +12,7 @@ import java.util.List;
  *
  * @author Ricardo Rocha
  */
-public class ExpenseTypeRegisterController extends BaseController{
+public class ExpenseTypeRegisterController extends BaseController {
     public ExpenseTypeRegisterController(){}
     public void registerExpenseType(String description)
     {

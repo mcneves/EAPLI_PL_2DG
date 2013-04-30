@@ -1,30 +1,5 @@
 package Model;
 
-<<<<<<< HEAD
-/**
- *
- * @author i100623
- */
-public class Check extends PaymentMean{
-    
-    private int countNumber;
-    private int checkNumber;
-    private String bank;
-
-    public int getCountNumber() {
-        return countNumber;
-    }
-    
-    public void setCountNumber(int countNumber) {
-        this.countNumber = countNumber;
-    }
-
-    public int getCheckNumber() {
-        return checkNumber;
-    }
-
-    public void setCheckNumber(int checkNumber) {
-=======
 public class Check extends PaymentMean {
     
     private String accountNumber;
@@ -51,15 +26,10 @@ public class Check extends PaymentMean {
     }
 
     public void setCheckNumber(String checkNumber) {
->>>>>>> 5e6d348eb1b7d3c2884710a1d3659b80ff3f5394
         this.checkNumber = checkNumber;
     }
 
     public String getBank() {
         return bank;
     }
-<<<<<<< HEAD
-
-=======
->>>>>>> 5e6d348eb1b7d3c2884710a1d3659b80ff3f5394
 }

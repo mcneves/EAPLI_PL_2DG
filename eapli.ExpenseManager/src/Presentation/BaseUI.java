@@ -29,6 +29,7 @@ public abstract class BaseUI {
 
     public void showBalances() {
          NumberFormat n = NumberFormat.getCurrencyInstance(Locale.FRANCE);
+         
          BigDecimal wb = controller().getThisWeekExpenditure();
          BigDecimal mb = controller().getThisMonthExpenditure();
          double week = wb.doubleValue();

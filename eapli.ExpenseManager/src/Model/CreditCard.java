@@ -2,24 +2,6 @@ package Model;
 
 import java.util.Date;
 
-<<<<<<< HEAD
-/**
- *
- * @author i100623
- */
-public class CreditCard extends PaymentMean{
-    
-    private int countNumber;
-    private int cvc;
-    private String bank;
-    private Date expirationValue;
-    
-    public int getCountNumber(){
-        return countNumber;
-    }
-    
-     public int getCvc(){
-=======
 
 public class CreditCard extends PaymentMean {
     
@@ -41,7 +23,6 @@ public class CreditCard extends PaymentMean {
     }
     
      public String getCvc(){
->>>>>>> 5e6d348eb1b7d3c2884710a1d3659b80ff3f5394
         return cvc;
     }
      

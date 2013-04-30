@@ -1,17 +1,3 @@
-<<<<<<< HEAD
-/*
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
- */
-package Model;
-
-/**
- *
- * @author i100623
- */
-public class DebitCard extends PaymentMean{
-    
-=======
 package Model;
 
 import java.util.Date;
@@ -48,5 +34,4 @@ public class DebitCard extends PaymentMean {
     public void setDate(Date date) {
         this.date = date;
     }
->>>>>>> 5e6d348eb1b7d3c2884710a1d3659b80ff3f5394
 }
