@@ -4,7 +4,7 @@
  */
 package Presentation;
 
-import Persistence.PaymentMeansRepository;
+import Persistence.Inmemory.PaymentMeansRepository;
 import eapli.util.Console;
 
 /**

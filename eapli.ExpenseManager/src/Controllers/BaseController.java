@@ -1,7 +1,7 @@
 package Controllers;
 
 import Model.ExpenseRecord;
-import Persistence.ExpenseRepository;
+import Persistence.Inmemory.ExpenseRepository;
 import eapli.util.DateTime;
 import java.math.BigDecimal;
 import java.text.DateFormat;

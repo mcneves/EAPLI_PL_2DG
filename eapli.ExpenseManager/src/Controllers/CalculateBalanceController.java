@@ -1,7 +1,7 @@
 package Controllers;
 
 import Model.ExpenseRecord;
-import Persistence.ExpenseRepository;
+import Persistence.Inmemory.ExpenseRepository;
 
 /**
  *

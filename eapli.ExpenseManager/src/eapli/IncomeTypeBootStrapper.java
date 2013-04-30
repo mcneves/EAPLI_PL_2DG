@@ -6,7 +6,7 @@ package eapli;
 
 import Model.IncomeType;
 import Persistence.IIncomeTypeRepository;
-import Persistence.IncomeTypeRepository;
+import Persistence.Inmemory.IncomeTypeRepository;
 
 /**
  *

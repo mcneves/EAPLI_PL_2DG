@@ -2,9 +2,10 @@
  * To change this template, choose Tools | Templates
  * and open the template in the editor.
  */
-package Persistence;
+package Persistence.Inmemory;
 
 import Model.ExpenseType;
+import Persistence.IExpenseTypeRepository;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;

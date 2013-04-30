@@ -7,7 +7,7 @@ package eapli;
 import Model.Income;
 import Model.IncomeType;
 import Persistence.IIncomeRepository;
-import Persistence.IncomeRepository;
+import Persistence.Inmemory.IncomeRepository;
 import eapli.util.DateTime;
 import java.math.BigDecimal;
 import java.util.Calendar;

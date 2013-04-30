@@ -4,21 +4,27 @@
  */
 package Persistence;
 
+import Persistence.Inmemory.IncomeTypeRepository;
+import Persistence.Inmemory.IncomeRepository;
+import Persistence.Inmemory.PaymentMeansRepository;
+import Persistence.Inmemory.ExpenseTypeRepository;
+import Persistence.Inmemory.ExpenseRepository;
+
 /**
  *
  * @author Jose Nuno Loureiro
  */
-public class PersistenceRegistry {
+public class InMemoryRepositoryFactory {
     //SINGLETON
     
-    private PersistenceRegistry(){
+    private InMemoryRepositoryFactory(){
     }
     
-    private static PersistenceRegistry instance = null;
+    private static InMemoryRepositoryFactory instance = null;
     
-    public static PersistenceRegistry getInstance(){
+    public static InMemoryRepositoryFactory getInstance(){
         if(instance==null){
-            instance = new PersistenceRegistry();
+            instance = new InMemoryRepositoryFactory();
         }
         
         return instance;

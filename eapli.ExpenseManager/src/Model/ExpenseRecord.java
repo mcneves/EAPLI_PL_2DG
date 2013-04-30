@@ -4,7 +4,7 @@
  */
 package Model;
 
-import Persistence.ExpenseRepository;
+import Persistence.Inmemory.ExpenseRepository;
 import eapli.util.DateTime;
 import java.math.BigDecimal;
 import java.util.Calendar;

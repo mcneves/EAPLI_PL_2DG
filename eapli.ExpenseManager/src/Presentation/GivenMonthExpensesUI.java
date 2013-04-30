@@ -8,7 +8,7 @@ import Controllers.BaseController;
 import Controllers.GivenMonthExpensesController;
 import Model.Expense;
 import Model.ExpenseType;
-import Persistence.ExpenseTypeRepository;
+import Persistence.Inmemory.ExpenseTypeRepository;
 import eapli.util.Console;
 import java.util.List;
 

@@ -5,7 +5,7 @@ import Model.Check;
 import Model.CreditCard;
 import Model.DebitCard;
 import Persistence.IPaymentMeansRepository;
-import Persistence.PaymentMeansRepository;
+import Persistence.Inmemory.PaymentMeansRepository;
 import java.util.Date;
 
 

@@ -13,7 +13,7 @@ import Controllers.ExpenseRegisterController;
 import Controllers.PaymentMeanController;
 import Model.ExpenseType;
 import Model.PaymentMean;
-import Persistence.ExpenseTypeRepository;
+import Persistence.Inmemory.ExpenseTypeRepository;
 import eapli.util.DateTime;
 //import Model.PaymentMeans; //quando existir
 import java.util.Calendar;

@@ -23,12 +23,12 @@ public class IncomeRegisterController extends BaseController{
 
       public void registerIncome(String desc, Date date, BigDecimal amount, IncomeType type) {
             Income income = new Income(desc, date, amount, type);
-            IIncomeRepository controller= Persistence.PersistenceRegistry.getInstance().incomeRepository();
+            IIncomeRepository controller= Persistence.InMemoryRepositoryFactory.getInstance().incomeRepository();
             controller.saveIncome(income);
       }
       
     public List<IncomeType> getIncomeTypes() {
-        IIncomeTypeRepository itr = Persistence.PersistenceRegistry.getInstance().incomeTypeRepository();
+        IIncomeTypeRepository itr = Persistence.InMemoryRepositoryFactory.getInstance().incomeTypeRepository();
         return itr.getAllIncomeTypes();
     }
     

@@ -8,8 +8,8 @@ import Model.Expense;
 import Model.ExpenseRecord;
 import Model.ExpenseType;
 import Model.PaymentMean;
-import Persistence.ExpenseRepository;
-import Persistence.ExpenseTypeRepository;
+import Persistence.Inmemory.ExpenseRepository;
+import Persistence.Inmemory.ExpenseTypeRepository;
 import Persistence.IExpenseRepository;
 import Persistence.IExpenseTypeRepository;
 import Persistence.IPaymentMeansRepository;
@@ -27,23 +27,23 @@ public class ExpenseRegisterController extends BaseController{
 
       public void registerExpense(String desc, Date date, BigDecimal amount, ExpenseType type) {
             Expense expense = new Expense(desc, date, amount, type);
-            IExpenseRepository controller= Persistence.PersistenceRegistry.getInstance().expenseRepository();
+            IExpenseRepository controller= Persistence.InMemoryRepositoryFactory.getInstance().expenseRepository();
             controller.saveExpense(expense);
       }
       
       public void registerExpense(String desc, Date date, BigDecimal amount, PaymentMean mean, ExpenseType type) {
             Expense expense = new Expense(desc, date, amount, mean, type);
-            IExpenseRepository controller= Persistence.PersistenceRegistry.getInstance().expenseRepository();
+            IExpenseRepository controller= Persistence.InMemoryRepositoryFactory.getInstance().expenseRepository();
             controller.saveExpense(expense);
       }
 
     public List<ExpenseType> getExpenseTypes() {
-        IExpenseTypeRepository etr = Persistence.PersistenceRegistry.getInstance().expenseTypeRepository();
+        IExpenseTypeRepository etr = Persistence.InMemoryRepositoryFactory.getInstance().expenseTypeRepository();
         return etr.getAllExpenseTypes();
     }
     
     public List<PaymentMean> getPaymentMeans() {
-        IPaymentMeansRepository pmr = Persistence.PersistenceRegistry.getInstance().paymentMeansRepository();
+        IPaymentMeansRepository pmr = Persistence.InMemoryRepositoryFactory.getInstance().paymentMeansRepository();
         return pmr.getAllPaymentMean();
     }
       

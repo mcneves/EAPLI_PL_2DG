@@ -2,7 +2,7 @@ package eapli;
 
 
 import Model.ExpenseType;
-import Persistence.ExpenseTypeRepository;
+import Persistence.Inmemory.ExpenseTypeRepository;
 import Persistence.IExpenseTypeRepository;
 import java.util.List;
 

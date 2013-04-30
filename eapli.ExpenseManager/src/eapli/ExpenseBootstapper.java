@@ -5,7 +5,7 @@
 package eapli;
 
 import Model.Expense;
-import Persistence.ExpenseRepository;
+import Persistence.Inmemory.ExpenseRepository;
 import Persistence.IExpenseRepository;
 import java.math.BigDecimal;
 
