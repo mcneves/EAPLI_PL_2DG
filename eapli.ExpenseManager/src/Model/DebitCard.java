@@ -1,13 +1,23 @@
 package Model;
 
 import java.util.Date;
+import javax.persistence.*;
 
+@Entity
 public class DebitCard extends PaymentMean {
 
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
+       
     private String accountNumber;
     private String bank;
+    
+    @Temporal(javax.persistence.TemporalType.DATE)
     private Date date;
 
+    protected DebitCard(){}
+    
     public DebitCard(String accountNumberDC, String bankDC, Date validadeDC) {
         super("Debit card");
         this.accountNumber = accountNumberDC;

@@ -1,11 +1,20 @@
 package Model;
 
+import javax.persistence.*;
+
+@Entity
 public class Check extends PaymentMean {
     
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
+       
     private String accountNumber;
     private String checkNumber;
     private String bank;
 
+    protected Check(){}
+    
     public Check(String accountNumber, String checkNumber, String bank) {
         super("Check");
         this.accountNumber = accountNumber;
