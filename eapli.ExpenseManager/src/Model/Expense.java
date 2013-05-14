@@ -13,17 +13,29 @@ import java.util.Date;
 import java.util.Locale;
 import Model.ExpenseType;
 import Model.PaymentMean; //quando existir
+import javax.persistence.*;
 
 /**
  *
  * @author Jose Nuno Loureiro
  */
+@Entity
 public class Expense {
 
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
+    
     private String description;
     private BigDecimal amount;
+    
+    @ManyToOne(cascade = CascadeType.ALL)
     private PaymentMean paymentMean;
+    
+    @Temporal(javax.persistence.TemporalType.DATE)
     private Date dateOccurred;
+    
+    @ManyToOne(cascade = CascadeType.ALL)
     private ExpenseType type;
     
 
