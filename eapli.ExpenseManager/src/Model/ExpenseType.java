@@ -4,11 +4,19 @@
  */
 package Model;
 
+import javax.persistence.*;
+
 /**
  *
  * @author Ricardo Rocha
  */
+@Entity
 public class ExpenseType {
+    
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
+    
     private String description;
     
     public ExpenseType(){}

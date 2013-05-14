@@ -1,6 +1,13 @@
 package Model;
 
+import javax.persistence.*;
+
+@Entity
 public class PaymentMean {
+    
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
     
     private String description;
     
