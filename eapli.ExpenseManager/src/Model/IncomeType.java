@@ -4,11 +4,21 @@
  */
 package Model;
 
+import javax.persistence.*;
+
+
 /**
  *
  * @author Nuno
  */
+
+@Entity
 public class IncomeType {
+    
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
+    
     private String description;
     
     public IncomeType(){}

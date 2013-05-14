@@ -9,16 +9,26 @@ import java.text.NumberFormat;
 import java.util.Calendar;
 import java.util.Date;
 import java.util.Locale;
+import javax.persistence.*;
 
 /**
  *
  * @author José Nuno Loureiro
  */
+@Entity
 public class Income {
+    
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
     
     private String description;
     private BigDecimal amount;
+    
+    @Temporal(javax.persistence.TemporalType.DATE)
     private Date dateOccurred;
+     
+    @ManyToOne(cascade = CascadeType.ALL) 
     private IncomeType type;
     
     protected Income(){
