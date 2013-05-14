@@ -11,6 +11,9 @@ public class PaymentMean {
     
     private String description;
     
+    protected PaymentMean(){
+    }
+    
     public PaymentMean(String description) {
         this.description = description;
     }
