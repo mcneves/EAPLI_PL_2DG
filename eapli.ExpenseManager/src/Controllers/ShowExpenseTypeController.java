@@ -5,7 +5,7 @@
 package Controllers;
 
 import Model.ExpenseType;
-import Persistence.Inmemory.ExpenseTypeRepository;
+import Persistence.IExpenseTypeRepository;
 import java.util.List;
 
 /**
@@ -15,7 +15,7 @@ import java.util.List;
 public class ShowExpenseTypeController extends BaseController{
     public ShowExpenseTypeController(){}
     public List<ExpenseType> getAllExpenseTypes() {
-            ExpenseTypeRepository repo = new ExpenseTypeRepository();
+            IExpenseTypeRepository repo = Persistence.PersistenceFactory.getInstance().buildRepositoryFactory().getExpenseTypeRepository();
             return repo.getAllExpenseTypes();
     }
     
