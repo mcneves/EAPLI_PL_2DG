@@ -4,6 +4,8 @@
  */
 package Persistence;
 
+import Persistence.Jpa.IncomeTypeJpaRepository;
+
 /**
  *
  * @author Ricardo Rocha
@@ -23,6 +25,11 @@ public  class JpaRepositoryFactory implements IRepositoryFactory{
     @Override
     public IPaymentMeansRepository getPaymentMeansRepository() {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public IIncomeTypeRepository getIncomeTypeRepository() {
+        return new IncomeTypeJpaRepository();
     }
     
 }
