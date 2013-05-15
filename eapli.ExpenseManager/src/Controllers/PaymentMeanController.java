@@ -43,6 +43,9 @@ public class PaymentMeanController {
     public List<PaymentMean> listAllPaymentMeans(){
         PaymentMeansRepository pmr = new  PaymentMeansRepository();
         List<PaymentMean> list = pmr.getAllPaymentMean();
+        for(int i=0;i<list.size();i++){
+            pmr.getAllPaymentMean();
+        }
         return list;
     }
 }

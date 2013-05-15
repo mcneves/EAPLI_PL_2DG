@@ -41,4 +41,9 @@ public class Check extends PaymentMean {
     public String getBank() {
         return bank;
     }
+    
+     @Override
+    public String toString(){
+        return super.toString()+"\nAccount Number: "+accountNumber+"\nCheck Number:"+checkNumber+"\nBank: "+bank;
+    }
 }

@@ -12,5 +12,10 @@ public class Cash extends PaymentMean {
     public Cash() {
         super("Cash");
     }
+    
+    @Override
+    public String toString(){
+        return super.toString();
+    }
 }
 

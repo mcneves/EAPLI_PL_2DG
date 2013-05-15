@@ -4,17 +4,22 @@
  */
 package Persistence;
 
+<<<<<<< HEAD
 import Persistence.Jpa.IncomeTypeJpaRepository;
+=======
+import Persistence.Inmemory.ExpenseTypeRepository;
+import Persistence.Jpa.ExpenseJpaRepository;
+>>>>>>> 048a2d4d02c5563d5be0b80ddd21bc1e4839cbfb
 
 /**
  *
  * @author Ricardo Rocha
  */
-public  class JpaRepositoryFactory implements IRepositoryFactory{
+public class JpaRepositoryFactory implements IRepositoryFactory{
 
     @Override
     public IExpenseRepository getExpenseRepository() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+           return new ExpenseJpaRepository();
     }
 
     @Override
