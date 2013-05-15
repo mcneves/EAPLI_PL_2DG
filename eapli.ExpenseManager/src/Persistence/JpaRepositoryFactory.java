@@ -44,4 +44,5 @@ public class JpaRepositoryFactory implements IRepositoryFactory{
     public IIncomeRepository getIncomeRepository() {
         return new IncomeJpaRepository();
     }
+}
     
