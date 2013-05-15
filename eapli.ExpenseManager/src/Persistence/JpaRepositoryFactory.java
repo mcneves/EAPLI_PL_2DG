@@ -4,12 +4,11 @@
  */
 package Persistence;
 
-<<<<<<< HEAD
+
 import Persistence.Jpa.IncomeTypeJpaRepository;
-=======
 import Persistence.Inmemory.ExpenseTypeRepository;
 import Persistence.Jpa.ExpenseJpaRepository;
->>>>>>> 048a2d4d02c5563d5be0b80ddd21bc1e4839cbfb
+
 
 /**
  *
