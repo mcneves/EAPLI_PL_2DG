@@ -13,5 +13,6 @@ public interface IRepositoryFactory {
     IExpenseRepository getExpenseRepository();
     IExpenseTypeRepository getExpenseTypeRepository();
     IPaymentMeansRepository getPaymentMeansRepository();
+    IIncomeRepository getIncomeRepository();
     IIncomeTypeRepository getIncomeTypeRepository();
 }

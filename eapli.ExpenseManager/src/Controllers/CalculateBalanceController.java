@@ -1,7 +1,8 @@
 package Controllers;
 
 import Model.ExpenseRecord;
-import Persistence.Inmemory.ExpenseRepository;
+import Persistence.IExpenseRepository;
+import Persistence.PersistenceFactory;
 
 /**
  *
@@ -13,7 +14,7 @@ public class CalculateBalanceController {
     
     public float calculateExpenseBalance(){
         float balance = 0;
-        ExpenseRepository repo=new ExpenseRepository();
+        IExpenseRepository repo = PersistenceFactory.getInstance().buildRepositoryFactory().getExpenseRepository();     
         ExpenseRecord ER=new ExpenseRecord(repo.getAllExpenses());
         balance = ER.calculateExpensesBalance();
         return balance;
