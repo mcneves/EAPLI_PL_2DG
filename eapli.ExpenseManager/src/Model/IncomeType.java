@@ -4,6 +4,7 @@
  */
 package Model;
 
+import java.io.Serializable;
 import javax.persistence.*;
 
 
@@ -13,7 +14,7 @@ import javax.persistence.*;
  */
 
 @Entity
-public class IncomeType {
+public class IncomeType implements Serializable {
     
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
