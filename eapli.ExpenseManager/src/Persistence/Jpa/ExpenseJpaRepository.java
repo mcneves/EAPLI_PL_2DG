@@ -16,17 +16,18 @@ public class ExpenseJpaRepository  extends JpaGeneric<Expense,Long> implements I
 
       @Override
       public void saveExpense(Expense exp) {
-            throw new UnsupportedOperationException("Not supported yet.");
+        save(exp);
       }
 
       @Override
       public List<Expense> getAllExpenses() {
-            throw new UnsupportedOperationException("Not supported yet.");
+          return (List<Expense>)findAll();
       }
 
       @Override
       public Expense getLastExpense() {
-            throw new UnsupportedOperationException("Not supported yet.");
+          Long id = getCount();
+          return read(id);
       }
       
 }
