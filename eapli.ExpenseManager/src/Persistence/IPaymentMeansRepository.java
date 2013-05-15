@@ -5,7 +5,7 @@ import java.util.List;
 
 
 public interface IPaymentMeansRepository {
-    void savePaymentMean(PaymentMean pm);
+    void savePaymentMean(PaymentMean pM);
     List<PaymentMean> getAllPaymentMean();
     
 }
