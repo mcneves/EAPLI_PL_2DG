@@ -44,4 +44,7 @@ public class DebitCard extends PaymentMean {
     public void setDate(Date date) {
         this.date = date;
     }
+    public String toString(){
+        return super.toString()+"\nAccount Number: "+accountNumber+"\nBank: "+bank+"\nExpiration Value: "+date;
+    }
 }
