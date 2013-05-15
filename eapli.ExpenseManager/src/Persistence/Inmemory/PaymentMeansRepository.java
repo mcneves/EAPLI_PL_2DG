@@ -13,14 +13,15 @@ public class PaymentMeansRepository implements IPaymentMeansRepository{
     public PaymentMeansRepository() {
         
     }
-
+ 
     public void savePaymentMean(PaymentMean pm) {
         if(pm==null) throw new IllegalArgumentException();
         listPaymentMean.add(pm);
     }
     
     public List<PaymentMean> getAllPaymentMean() {
-        return Collections.unmodifiableList(listPaymentMean);
+        return listPaymentMean;
+        //return Collections.unmodifiableList(listPaymentMean);
     }
     
    
