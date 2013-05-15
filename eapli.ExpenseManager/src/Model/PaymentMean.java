@@ -3,15 +3,15 @@ package Model;
 import javax.persistence.*;
 
 @Entity
+@Inheritance(strategy=InheritanceType.SINGLE_TABLE)
 public class PaymentMean {
     
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    
     private String description;
     
-    protected PaymentMean(){
+   public PaymentMean(){
     }
     
     public PaymentMean(String description) {

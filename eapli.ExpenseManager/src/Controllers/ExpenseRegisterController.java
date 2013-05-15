@@ -17,36 +17,35 @@ import java.math.BigDecimal;
 import java.util.Calendar;
 import java.util.Date;
 import java.util.List;
+
 /**
  *
  * @author Jose Nuno Loureiro
  */
-public class ExpenseRegisterController extends BaseController{
-      public ExpenseRegisterController() {
-      }
+public class ExpenseRegisterController extends BaseController {
 
-      public void registerExpense(String desc, Date date, BigDecimal amount, ExpenseType type) {
-            Expense expense = new Expense(desc, date, amount, type);
-            IExpenseRepository controller= Persistence.InMemoryRepositoryFactory.getInstance().expenseRepository();
-            controller.saveExpense(expense);
-      }
-      
-      public void registerExpense(String desc, Date date, BigDecimal amount, PaymentMean mean, ExpenseType type) {
-            Expense expense = new Expense(desc, date, amount, mean, type);
-            IExpenseRepository controller= Persistence.InMemoryRepositoryFactory.getInstance().expenseRepository();
-            controller.saveExpense(expense);
-      }
+    public ExpenseRegisterController() {
+    }
+
+    public void registerExpense(String desc, Date date, BigDecimal amount, ExpenseType type) {
+        Expense expense = new Expense(desc, date, amount, type);
+        IExpenseRepository controller = Persistence.PersistenceFactory.getInstance().buildRepositoryFactory().getExpenseRepository();
+        controller.saveExpense(expense);
+    }
+
+    public void registerExpense(String desc, Date date, BigDecimal amount, PaymentMean mean, ExpenseType type) {
+        Expense expense = new Expense(desc, date, amount, mean, type);
+        IExpenseRepository controller = Persistence.PersistenceFactory.getInstance().buildRepositoryFactory().getExpenseRepository();
+        controller.saveExpense(expense);
+    }
 
     public List<ExpenseType> getExpenseTypes() {
-        IExpenseTypeRepository etr = Persistence.InMemoryRepositoryFactory.getInstance().expenseTypeRepository();
+        IExpenseTypeRepository etr = Persistence.PersistenceFactory.getInstance().buildRepositoryFactory().getExpenseTypeRepository();
         return etr.getAllExpenseTypes();
     }
-    
+
     public List<PaymentMean> getPaymentMeans() {
-        IPaymentMeansRepository pmr = Persistence.InMemoryRepositoryFactory.getInstance().paymentMeansRepository();
+        IPaymentMeansRepository pmr = Persistence.PersistenceFactory.getInstance().buildRepositoryFactory().getPaymentMeansRepository();
         return pmr.getAllPaymentMean();
     }
-      
-      
 }
-

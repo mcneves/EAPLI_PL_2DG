@@ -59,7 +59,7 @@ public class PaymentMeanUI {
                     PaymentMeanController pmc= new PaymentMeanController();
                     List<PaymentMean> list = pmc.listAllPaymentMeans();
                     for(int i=0;i<list.size();i++){
-                        System.out.println(list.get(i));
+                        System.out.println(list.get(i).toString());
                         System.out.println("");
                     }
                     break;
