@@ -26,15 +26,15 @@ public class MainMenu {
                     break;
                 case 1:
                     ExpenseRegisterUI ui = new ExpenseRegisterUI();
-                    ui.run();
+                    ui.show();
                     break;
                 case 2:
                     ShowExpensesUI showExpensesUI = new ShowExpensesUI();
-                    showExpensesUI.loop();
+                    showExpensesUI.run();
                     break;
                 case 3:
                     ExpenseTypeRegisterUI uiType = new ExpenseTypeRegisterUI();
-                    uiType.run();
+                    uiType.show();
                     break;
                 case 4:
                     ShowWeeklyExpensesUI SWE = new ShowWeeklyExpensesUI();
@@ -47,15 +47,15 @@ public class MainMenu {
                     break;
                 case 6:
                     IncomeTypeRegisterUI incomeTypeUI = new IncomeTypeRegisterUI();
-                    incomeTypeUI.run();
+                    incomeTypeUI.show();
                     break;
                 case 7:
                     IncomeRegisterUI incomeRegisterUI = new IncomeRegisterUI();
-                    incomeRegisterUI.run();
+                    incomeRegisterUI.show();
                     break;
                 case 8:
                     PaymentMeanUI pm= new PaymentMeanUI();
-                    pm.run();
+                    pm.show();
                     break;
                 case 9:
                     ShowIncomesUI showIncomesUI = new ShowIncomesUI();
