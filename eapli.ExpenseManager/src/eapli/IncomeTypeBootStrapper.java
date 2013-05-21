@@ -6,7 +6,7 @@ package eapli;
 
 import Model.IncomeType;
 import Persistence.IIncomeTypeRepository;
-import Persistence.Inmemory.IncomeTypeRepository;
+import Persistence.PersistenceFactory;
 
 /**
  *
@@ -14,7 +14,7 @@ import Persistence.Inmemory.IncomeTypeRepository;
  */
 public class IncomeTypeBootStrapper {
         static{
-        IIncomeTypeRepository repo = new IncomeTypeRepository();
+        IIncomeTypeRepository repo = PersistenceFactory.getInstance().buildRepositoryFactory().getIncomeTypeRepository();
         
         repo.saveIncomeTypes(new IncomeType("Salário"));
         repo.saveIncomeTypes(new IncomeType("Mesada"));
