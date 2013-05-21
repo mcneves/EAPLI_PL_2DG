@@ -11,12 +11,12 @@ import java.math.BigDecimal;
 
 /**
  *
- * @author Outsider
+ * @author José Nuno Loureiro
  */
 public class ExpenseBootStrapper {
     
     static{
-        IExpenseRepository repo = new ExpenseRepository();
+        IExpenseRepository repo = Persistence.PersistenceFactory.getInstance().buildRepositoryFactory().getExpenseRepository();
         
         repo.saveExpense(new Expense("Autocarro",2013,3,4,new BigDecimal(2.4)));
         repo.saveExpense(new Expense("Almoço",2013,3,5,new BigDecimal(12.4)));
