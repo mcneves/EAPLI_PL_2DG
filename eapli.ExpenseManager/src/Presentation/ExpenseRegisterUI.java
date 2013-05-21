@@ -5,7 +5,7 @@
 package Presentation;
 
 import Controllers.BaseController;
-import Controllers.CalculateBalanceController;
+import Controllers.ShowBalanceController;
 import eapli.util.Console;
 import java.math.BigDecimal;
 import java.util.Date;
@@ -53,8 +53,8 @@ public class ExpenseRegisterUI extends BaseUI {
        
         controller.registerExpense(desc, date, amount, mean, type); //regista a despesa
 
-        CalculateBalanceController calculate = new CalculateBalanceController();
-        System.out.println("Current balance: " + calculate.calculateExpenseBalance());
+        ShowBalanceController calculate = new ShowBalanceController();
+        System.out.println("Current balance: " + calculate.getBalance());
 
 
         System.out.println("Expense recorded. \n");
