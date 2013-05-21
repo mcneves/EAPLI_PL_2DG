@@ -1,5 +1,6 @@
 package Presentation;
 
+import Controllers.BaseController;
 import Controllers.ExpenseRegisterController;
 import Controllers.PaymentMeanController;
 import Model.PaymentMean;
@@ -9,7 +10,7 @@ import java.util.Calendar;
 import java.util.Date;
 import java.util.List;
 
-public class PaymentMeanUI {
+public class PaymentMeanUI extends BaseUI{
     public PaymentMeanUI() {
 
     }
@@ -121,4 +122,14 @@ public class PaymentMeanUI {
             
         
     }*/
+
+    @Override
+    protected BaseController controller() {
+        return controller;
+    }
+
+    @Override
+    public void header() {
+        System.out.println("Payment Means Register");
+    }
 }
