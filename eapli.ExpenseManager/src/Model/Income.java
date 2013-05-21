@@ -4,6 +4,7 @@
  */
 package Model;
 
+import java.io.Serializable;
 import java.math.BigDecimal;
 import java.text.NumberFormat;
 import java.util.Calendar;
@@ -16,7 +17,7 @@ import javax.persistence.*;
  * @author José Nuno Loureiro
  */
 @Entity
-public class Income {
+public class Income implements Serializable {
     
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -58,5 +59,8 @@ public class Income {
                 + "\n "+ type;
         return s;
     }
-
+    
+    public BigDecimal getAmount(){
+        return amount;
+    }
 }

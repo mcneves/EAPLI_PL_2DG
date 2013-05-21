@@ -21,27 +21,22 @@ import javax.persistence.*;
  */
 @Entity
 public class Expense {
-
+    
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    
     private String description;
     private BigDecimal amount;
-    
     @ManyToOne(cascade = CascadeType.ALL)
     private PaymentMean paymentMean;
-    
     @Temporal(javax.persistence.TemporalType.DATE)
     private Date dateOccurred;
-    
     @ManyToOne(cascade = CascadeType.ALL)
     private ExpenseType type;
     
-
     protected Expense() {
     }
-
+    
     public Expense(String description, Date dateOccurred, BigDecimal amount) {
         if (description == null || dateOccurred == null || amount == null) {
             throw new IllegalArgumentException();
@@ -52,14 +47,14 @@ public class Expense {
         }
         this.description = description;
         this.amount = amount;
-        this.dateOccurred=dateOccurred;
+        this.dateOccurred = dateOccurred;
     }
 
 //antiga data calendar
     public Expense(String desc, int year, int month, int day, BigDecimal amount) {
         this(desc, DateTime.newDate(year, month, day), amount);
     }
-
+    
     public Expense(Expense exp) {
         if (exp == null) {
             throw new IllegalArgumentException();
@@ -68,11 +63,9 @@ public class Expense {
         this.amount = exp.amount;
         this.paymentMean = exp.paymentMean;
         this.dateOccurred = exp.dateOccurred;
-        this.type=exp.type;
+        this.type = exp.type;
     }
-
-   
-
+    
     public Expense(String description, Date dateOccurred, BigDecimal amount, ExpenseType type) {
         if (description == null || dateOccurred == null || amount == null) {
             throw new IllegalArgumentException();
@@ -83,11 +76,9 @@ public class Expense {
         }
         this.description = description;
         this.amount = amount;
-        this.dateOccurred =dateOccurred;
-        this.type=type;
+        this.dateOccurred = dateOccurred;
+        this.type = type;
     }
-    
-    
     
     public Expense(String description, Date dateOccurred, BigDecimal amount, PaymentMean paymentMean, ExpenseType type) {
         if (description == null || dateOccurred == null || amount == null) {
@@ -101,7 +92,7 @@ public class Expense {
         this.amount = amount;
         this.paymentMean = paymentMean;
         this.dateOccurred = dateOccurred;
-        this.type=type;
+        this.type = type;
     }
     
     @Override
@@ -109,34 +100,35 @@ public class Expense {
         NumberFormat n = NumberFormat.getCurrencyInstance(Locale.FRANCE);
         double doubleAmount = this.amount.doubleValue();
         String s = "Description: " + this.description
-                + "\nAmount: " + n.format(doubleAmount)  
+                + "\nAmount: " + n.format(doubleAmount)
                 + "\n" + paymentMean
-                +"\nDate: " + dateOccurred
-                + "\n "+ type;
+                + "\nDate: " + dateOccurred
+                + "\n" + type;
         return s;
-
+        
     }
-
-    public Date getDateOcurred(){
+    
+    public Date getDateOcurred() {
         return dateOccurred;
     }
-    public BigDecimal getAmount(){
+
+    public BigDecimal getAmount() {
         return amount;
     }
     
-public int getMonth(){
-        Calendar c=null;
-        c.setTime(dateOccurred);
-        return c.get(Calendar.MONTH); 
-    }
-
-    public int getYear(){
-        Calendar c=null;
-        c.setTime(dateOccurred);
-       return c.get(Calendar.YEAR);
+    public int getMonth() {
+        Calendar c = DateTime.dateToCalendar(dateOccurred);
+        //c.setTime(dateOccurred);
+        return c.get(Calendar.MONTH);        
     }
     
-    public ExpenseType getExpenseType(){
+    public int getYear() {
+        Calendar c = DateTime.dateToCalendar(dateOccurred);
+        //c.setTime(dateOccurred);
+        return c.get(Calendar.YEAR);
+    }
+    
+    public ExpenseType getExpenseType() {
         return type;
     }
 }

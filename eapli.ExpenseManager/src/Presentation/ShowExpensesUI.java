@@ -74,7 +74,7 @@ public class ShowExpensesUI extends BaseUI{
 
     @Override
     public void header() {
-        System.out.println("------------BASE UI------------");
+        System.out.println("------------ SHOW EXPENSES ------------");
     }
 
 }

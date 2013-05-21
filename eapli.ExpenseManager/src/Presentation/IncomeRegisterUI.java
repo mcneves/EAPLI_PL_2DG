@@ -5,13 +5,11 @@
 package Presentation;
 
 import Controllers.BaseController;
-import Controllers.CalculateBalanceController;
+import Controllers.ShowBalanceController;
 import Controllers.IncomeRegisterController;
 import Model.IncomeType;
 import eapli.util.Console;
-import eapli.util.DateTime;
 import java.math.BigDecimal;
-import java.util.Calendar;
 import java.util.Date;
 import java.util.List;
 
@@ -46,8 +44,8 @@ public class IncomeRegisterUI extends BaseUI {
 
         controller.registerIncome(desc, date, amount, type); //regista o rendimento
 
-        CalculateBalanceController calculate = new CalculateBalanceController();
-        System.out.println("Current balance: " + calculate.calculateExpenseBalance());
+        ShowBalanceController calculate = new ShowBalanceController();
+        System.out.println("Current balance: " + calculate.getBalance());
 
 
         System.out.println("Income recorded. \n");
