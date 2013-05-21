@@ -6,24 +6,25 @@ package Controllers;
 
 import Model.Expense;
 import Persistence.Inmemory.ExpenseRepository;
+import Persistence.*;
 import java.util.List;
 
 /**
  *
- * @author 
+ * @author
  */
-public class ShowExpensesController {
-      public ShowExpensesController() {
-      }
+public class ShowExpensesController extends BaseController {
 
-      public List<Expense> getAllExpenses() {
-            ExpenseRepository repo = new ExpenseRepository();
-            return repo.getAllExpenses();
-      }
+    public ShowExpensesController() {
+    }
 
-      public Expense getLastExpense() {
-            ExpenseRepository repo = new ExpenseRepository();
-            return repo.getLastExpense();
-      }
+    public List<Expense> getAllExpenses() {
+        IExpenseRepository repo = Persistence.PersistenceFactory.getInstance().buildRepositoryFactory().getExpenseRepository();
+        return repo.getAllExpenses();
+    }
+
+    public Expense getLastExpense() {
+        IExpenseRepository repo = Persistence.PersistenceFactory.getInstance().buildRepositoryFactory().getExpenseRepository();
+        return repo.getLastExpense();
+    }
 }
-
