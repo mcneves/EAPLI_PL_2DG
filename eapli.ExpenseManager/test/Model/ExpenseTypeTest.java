@@ -13,11 +13,11 @@ import static org.junit.Assert.*;
 
 /**
  *
- * @author Ricardo Rocha
+ * @author Nuno
  */
-public class IncomeTypeTest {
+public class ExpenseTypeTest {
     
-    public IncomeTypeTest() {
+    public ExpenseTypeTest() {
     }
     
     @BeforeClass
@@ -37,13 +37,13 @@ public class IncomeTypeTest {
     }
 
     /**
-     * Test of getdescription method, of class IncomeType.
+     * Test of getdescription method, of class ExpenseType.
      */
     @Test
     public void testGetdescription() {
         System.out.println("getdescription");
-        IncomeType instance = new IncomeType("M");
-        String expResult = "M";
+        ExpenseType instance = new ExpenseType("X");
+        String expResult = "X";
         String result = instance.getdescription();
         assertEquals(expResult, result);
         // TODO review the generated test code and remove the default call to fail.
@@ -51,16 +51,17 @@ public class IncomeTypeTest {
     }
 
     /**
-     * Test of toString method, of class IncomeType.
+     * Test of toString method, of class ExpenseType.
      */
     @Test
     public void testToString() {
         System.out.println("toString");
-        IncomeType instance = new IncomeType("M");
-        String expResult = "Description: M";
+        ExpenseType instance = new ExpenseType("X");
+        String expResult = "Type: X";
         String result = instance.toString();
         assertEquals(expResult, result);
         // TODO review the generated test code and remove the default call to fail.
         //fail("The test case is a prototype.");
+        
     }
 }
