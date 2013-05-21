@@ -85,7 +85,7 @@ public class PaymentMeanUI {
     private String validarAccountNumber(String accountNumber) {
         // falta validar letras
         while( accountNumber.length() != 16 ) {
-                System.out.println("Invalid account number.\n");
+                System.out.println("Invalid account number. 16 numbers needed\n");
                 accountNumber = Console.readLine("Please insert a valid account number: ");
         }
         return accountNumber;
@@ -94,7 +94,7 @@ public class PaymentMeanUI {
     private String validarCheckNumber(String checkNumber) {
         // valida??o errada . validar letras
         while( checkNumber.length() != 16 ) {
-                System.out.println("Invalid check number.\n");
+                System.out.println("Invalid check number. 16 numbers needed\n");
                 checkNumber = Console.readLine("Please insert a valid check number: ");
         }
         return checkNumber;
@@ -102,7 +102,7 @@ public class PaymentMeanUI {
 
     private void validarCVC(String CVC) {
         while( CVC.length() != 3 ) {
-            System.out.println("Invalid CVC.\n");
+            System.out.println("Invalid CVC. 3 numbers needed\n");
             CVC = Console.readLine("Please insert a valid CVC: ");
         }
     }
