@@ -13,6 +13,7 @@ import Persistence.Jpa.IncomeTypeJpaRepository;
 import Persistence.Inmemory.ExpenseTypeRepository;
 import Persistence.Jpa.ExpenseJpaRepository;
 import Persistence.Jpa.ExpenseTypeJpaRepository;
+import Persistence.Jpa.PaymentMeansJpaRepository;
 
 /**
  *
@@ -32,7 +33,7 @@ public class JpaRepositoryFactory implements IRepositoryFactory{
 
     @Override
     public IPaymentMeansRepository getPaymentMeansRepository() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        return new PaymentMeansJpaRepository();
     }
 
     @Override
