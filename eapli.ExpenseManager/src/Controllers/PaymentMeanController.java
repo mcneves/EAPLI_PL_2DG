@@ -12,7 +12,7 @@ import java.math.BigDecimal;
 import java.util.Date;
 import java.util.List;
 
-public class PaymentMeanController {
+public class PaymentMeanController extends BaseController{
 
     PaymentMeansRepository repo = new PaymentMeansRepository();
     

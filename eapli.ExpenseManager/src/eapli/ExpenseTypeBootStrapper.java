@@ -17,7 +17,7 @@ import java.util.List;
  */
 public class ExpenseTypeBootStrapper {
     static{
-        IExpenseTypeRepository repo = new ExpenseTypeRepository();
+        IExpenseTypeRepository repo = Persistence.PersistenceFactory.getInstance().buildRepositoryFactory().getExpenseTypeRepository();
         
         repo.saveExpenseTypes(new ExpenseType("Transportes"));
         repo.saveExpenseTypes(new ExpenseType("Vestuario"));
