@@ -59,7 +59,7 @@ public class MainMenu {
                     break;
                 case 9:
                     ShowIncomesUI showIncomesUI = new ShowIncomesUI();
-                    showIncomesUI.loop();
+                    showIncomesUI.run();
                     break;
                 case 10:
                     ShowExpenseTypeUI showExpenseTypesUI = new ShowExpenseTypeUI();
