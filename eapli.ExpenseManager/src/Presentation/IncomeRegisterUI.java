@@ -25,7 +25,7 @@ public class IncomeRegisterUI extends BaseUI {
 
     public void run() {
 
-        System.out.println("* * *  REGISTER AN INCOME  * * *\n");
+     //   System.out.println("* * *  REGISTER AN INCOME  * * *\n");
         String desc = Console.readLine("Description:\n");
 //        int year = Console.readInteger("Year:\n");
 //        int month = Console.readInteger("Month (1-12):\n");
