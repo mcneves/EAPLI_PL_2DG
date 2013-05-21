@@ -1,6 +1,7 @@
 package Controllers;
 
 import Model.AccountServices;
+import java.math.BigDecimal;
 
 /**
  *
@@ -10,9 +11,7 @@ public class ShowBalanceController extends BaseController {
     public ShowBalanceController() {
       }
     
-    public float getBalance(){
-        float balance = 0; 
-        AccountServices.getBalance();
-        return balance;
+    public BigDecimal getBalance(){
+        return new BigDecimal(AccountServices.getBalance().floatValue());
     }
 }

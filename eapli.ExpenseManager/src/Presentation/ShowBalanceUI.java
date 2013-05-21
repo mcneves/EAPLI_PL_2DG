@@ -2,6 +2,7 @@ package Presentation;
 
 import Controllers.BaseController;
 import Controllers.ShowBalanceController;
+import eapli.util.Console;
 
 /**
  *
@@ -17,7 +18,8 @@ public class ShowBalanceUI extends BaseUI{
     public void run(){
         
         System.out.println("* * * Show Balance * * *\n\n");
-        System.out.println("Balance: "+controller.getBalance());
+        System.out.println("Balance: "+controller.getBalance().floatValue());
+        Console.readLine("Press any key to continue...");
     }
     
     @Override

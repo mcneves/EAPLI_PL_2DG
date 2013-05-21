@@ -69,6 +69,10 @@ public class MainMenu {
                     ShowIncomeTypeUI showIncomeTypeUI = new ShowIncomeTypeUI();
                     showIncomeTypeUI.run();
                     break;
+                case 12:
+                    ShowBalanceUI showBalanceUI = new ShowBalanceUI();
+                    showBalanceUI.run();
+                    break;
             }
         } while (op != 0);
 
@@ -88,6 +92,7 @@ public class MainMenu {
         System.out.println("9. Show Incomes");
         System.out.println("10. Show Expense Types");
         System.out.println("11. Show Income Types");
+        System.out.println("12. Show Balance");
         System.out.println("0. Exit\n\n");
 
         int option = Console.readInteger("Please choose an option");
