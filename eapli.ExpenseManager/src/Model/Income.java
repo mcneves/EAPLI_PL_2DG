@@ -56,7 +56,7 @@ public class Income implements Serializable {
         String s = "Description: " + this.description
                 + "\nAmount: " + n.format(doubleAmount)  
                 +"\nDate: " + dateOccurred
-                + "\n "+ type;
+                + "\n"+ type;
         return s;
     }
     

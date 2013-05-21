@@ -18,7 +18,7 @@ public class ShowIncomesController extends BaseController{
       }
 
       public List<Income> getAllIncomes() {
-            IIncomeRepository repo = Persistence.InMemoryRepositoryFactory.getInstance().incomeRepository();
+            IIncomeRepository repo = Persistence.PersistenceFactory.getInstance().buildRepositoryFactory().getIncomeRepository();
             return repo.getAllIncomes();
       }
 
