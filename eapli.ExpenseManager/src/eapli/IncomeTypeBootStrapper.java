@@ -14,7 +14,7 @@ import Persistence.PersistenceFactory;
  */
 public class IncomeTypeBootStrapper {
         static{
-        IIncomeTypeRepository repo = PersistenceFactory.getInstance().buildRepositoryFactory().getIncomeTypeRepository();
+        IIncomeTypeRepository repo = Persistence.PersistenceFactory.getInstance().buildRepositoryFactory().getIncomeTypeRepository();
         
         repo.saveIncomeTypes(new IncomeType("Salário"));
         repo.saveIncomeTypes(new IncomeType("Mesada"));
