@@ -1284,3 +1284,27 @@ org.h2.jdbc.JdbcSQLException: The object is already closed [90007-171]
 	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:146)
 	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:138)
 	at java.awt.EventDispatchThread.run(EventDispatchThread.java:91)
+05-21 17:24:54 jdbc[2]: exception
+org.h2.jdbc.JdbcSQLException: Table "EXPENSE" not found; SQL statement:
+ALTER TABLE EXPENSE DROP CONSTRAINT FK_EXPENSE_TYPE_ID [42102-171]
+05-21 17:24:54 jdbc[2]: exception
+org.h2.jdbc.JdbcSQLException: Table "EXPENSE" not found; SQL statement:
+ALTER TABLE EXPENSE DROP CONSTRAINT FK_EXPENSE_PAYMENTMEAN_ID [42102-171]
+05-21 17:24:54 jdbc[2]: exception
+org.h2.jdbc.JdbcSQLException: Table "INCOME" not found; SQL statement:
+ALTER TABLE INCOME DROP CONSTRAINT FK_INCOME_TYPE_ID [42102-171]
+05-21 17:24:54 jdbc[2]: exception
+org.h2.jdbc.JdbcSQLException: Table "PAYMENTMEAN" not found; SQL statement:
+DROP TABLE PAYMENTMEAN [42102-171]
+05-21 17:24:54 jdbc[2]: exception
+org.h2.jdbc.JdbcSQLException: Table "EXPENSE" not found; SQL statement:
+DROP TABLE EXPENSE [42102-171]
+05-21 17:24:54 jdbc[2]: exception
+org.h2.jdbc.JdbcSQLException: Table "EXPENSETYPE" not found; SQL statement:
+DROP TABLE EXPENSETYPE [42102-171]
+05-21 17:24:54 jdbc[2]: exception
+org.h2.jdbc.JdbcSQLException: Table "INCOME" not found; SQL statement:
+DROP TABLE INCOME [42102-171]
+05-21 17:24:55 jdbc[2]: exception
+org.h2.jdbc.JdbcSQLException: Table "INCOMETYPE" not found; SQL statement:
+DROP TABLE INCOMETYPE [42102-171]

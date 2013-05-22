@@ -29,12 +29,14 @@ public class ExpenseRecord {
         String[] aux = month.split("-");
         int[] auxM = new int[2];
         List<Expense> despesas = allExpenses;
-        List<Expense> despmes = null;
+        List<Expense> despmes = new ArrayList<>();
         for (int i = 0; i < despesas.size(); i++) {
-            auxM[0] = despesas.get(i).getMonth();
-            auxM[1] = despesas.get(i).getYear();
+            
+            auxM[0] = despesas.get(i).getMonth()+1;
+            auxM[1] = despesas.get(i).getYear()+1900;
             if ((Integer.parseInt(aux[0])) == auxM[0] && (Integer.parseInt(aux[1])) == auxM[1]) {
-                despmes.add(despesas.get(i));
+                Expense e=despesas.get(i);
+                despmes.add(e);
             }
         }
         return despmes;
@@ -44,12 +46,13 @@ public class ExpenseRecord {
         String[] aux = month.split("-");
         int[] auxM = new int[2];
         List<Expense> despesas = allExpenses;
-        List<Expense> despmes = null;
+        List<Expense> despmes = new ArrayList<>();
         for (int i = 0; i < despesas.size(); i++) {
-            auxM[0] = despesas.get(i).getMonth();
-            auxM[1] = despesas.get(i).getYear();
-            if ((Integer.parseInt(aux[0])) == auxM[0] && (Integer.parseInt(aux[1])) == auxM[1] && despesas.get(i).getExpenseType().equals(T)) {
-                despmes.add(despesas.get(i));
+            auxM[0] = despesas.get(i).getMonth()+1;
+            auxM[1] = despesas.get(i).getYear()+1900;
+            if ((Integer.parseInt(aux[0])) == auxM[0] && (Integer.parseInt(aux[1])) == auxM[1] && despesas.get(i).getExpenseType().getdescription().matches(T.getdescription())) {
+                Expense e=despesas.get(i);
+                despmes.add(e);
             }
         }
         return despmes;

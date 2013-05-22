@@ -8,7 +8,7 @@ import Controllers.BaseController;
 import Controllers.GivenMonthExpensesController;
 import Model.Expense;
 import Model.ExpenseType;
-import Persistence.Inmemory.ExpenseTypeRepository;
+import Persistence.IExpenseTypeRepository;
 import eapli.util.Console;
 import java.util.List;
 
@@ -37,7 +37,7 @@ public class GivenMonthExpensesUI extends BaseUI{
             listmonthly= controller.getMonthlyExpensesList(date);
         }
         else{
-            ExpenseTypeRepository etr=new ExpenseTypeRepository();
+            IExpenseTypeRepository etr=Persistence.PersistenceFactory.getInstance().buildRepositoryFactory().getExpenseTypeRepository();
             List<ExpenseType> eT=etr.getAllExpenseTypes();
             for(int i=0;i<eT.size();i++){
                 System.out.println((i+1)+"-"+eT.get(i));
