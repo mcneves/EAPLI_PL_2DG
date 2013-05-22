@@ -38,7 +38,7 @@ public class ShowExpensesUI extends BaseUI{
                               break;
                         case 3:
                                 GivenMonthExpensesUI gmeUI=new GivenMonthExpensesUI();
-                                gmeUI.run();
+                                gmeUI.show();
                                 break;
                         default:
                               System.out.println("Wrong option. Please repeat");
