@@ -125,7 +125,11 @@ public class Expense {
     public int getYear() {
         Calendar c = DateTime.dateToCalendar(dateOccurred);
         //c.setTime(dateOccurred);
-        return c.get(Calendar.YEAR);
+        if(c.get(Calendar.YEAR)<1000)
+            return c.get(Calendar.YEAR);
+        else{
+            return c.get(Calendar.YEAR)-1900;
+        }
     }
     
     public ExpenseType getExpenseType() {

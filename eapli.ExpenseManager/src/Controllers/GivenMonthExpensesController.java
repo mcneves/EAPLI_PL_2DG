@@ -7,6 +7,7 @@ package Controllers;
 import Model.Expense;
 import Model.ExpenseRecord;
 import Model.ExpenseType;
+import Persistence.IExpenseRepository;
 import Persistence.Inmemory.ExpenseRepository;
 import java.util.List;
 
@@ -17,14 +18,15 @@ import java.util.List;
 public class GivenMonthExpensesController extends BaseController{
     
     public List<Expense> getMonthlyExpensesList(String date){
-        ExpenseRepository repo=new ExpenseRepository();
+        IExpenseRepository repo=Persistence.PersistenceFactory.getInstance().buildRepositoryFactory().getExpenseRepository();
         ExpenseRecord ER=new ExpenseRecord(repo.getAllExpenses());
         return ER.getMonthlyExpensesList(date);
     }
     
     public List<Expense> getFMonthlyExpensesList(ExpenseType type,String date){
-        ExpenseRepository repo=new ExpenseRepository();
-        return null;
+        IExpenseRepository repo=Persistence.PersistenceFactory.getInstance().buildRepositoryFactory().getExpenseRepository();
+        ExpenseRecord ER=new ExpenseRecord(repo.getAllExpenses());
+        return ER.getFMonthlyExpensesList(type,date);
     }
     
     
