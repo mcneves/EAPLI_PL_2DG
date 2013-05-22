@@ -62,7 +62,7 @@ public class ExpenseRecord {
         BigDecimal total = new BigDecimal(0);
         List<Expense> monthExpenses = new ArrayList<>();
         for (int i = 0; i < allExpenses.size(); i++) {
-            if (allExpenses.get(i).getMonth() == Integer.parseInt(month)) {
+            if (allExpenses.get(i).getMonth()+1 == Integer.parseInt(month)) {
                 monthExpenses.add(allExpenses.get(i));
             }
         }

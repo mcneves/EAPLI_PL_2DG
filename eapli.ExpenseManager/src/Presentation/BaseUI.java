@@ -34,8 +34,8 @@ public abstract class BaseUI {
          BigDecimal mb = controller().getThisMonthExpenditure();
          double week = wb.doubleValue();
          double month = mb.doubleValue();
-         System.out.println("Weekly expenditure"+ n.format(week));
-         System.out.println("Monthly expenditure" + n.format(month));
+         System.out.println("Weekly expenditure: "+ n.format(week));
+         System.out.println("Monthly expenditure: " + n.format(month));
     }
 }
 
